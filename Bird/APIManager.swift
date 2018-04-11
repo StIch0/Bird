@@ -34,8 +34,7 @@ class APIManager {
             imagesArr: imagesArr,
             onSucces: {
              (responseJSON : JSON)->Void in
-             print("responseJSON",responseJSON.dictionary!)
-                if let keyDict = key {
+                 if let keyDict = key {
                     if let responseDict = responseJSON[keyDict].arrayObject {
                         let dataDict = responseDict as! [[String : AnyObject]]
                         var dataModel = Array<GeneralModel>()

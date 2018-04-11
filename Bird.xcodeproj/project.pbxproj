@@ -24,6 +24,8 @@
 		7757FBF4207B56A500D8811B /* BirdPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757FBF3207B56A500D8811B /* BirdPresenter.swift */; };
 		7757FBF6207B575800D8811B /* ViewBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757FBF5207B575800D8811B /* ViewBuild.swift */; };
 		7757FBF8207B57BE00D8811B /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757FBF7207B57BE00D8811B /* ViewData.swift */; };
+		7757FBFC207C616900D8811B /* BirdInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757FBFB207C616900D8811B /* BirdInfo.swift */; };
+		7757FBFE207DBAF900D8811B /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757FBFD207DBAF900D8811B /* DataBaseManager.swift */; };
 		DA8C093E3FE4790F5DD10D09 /* Pods_Bird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A15B68A9499B10B321F0D4 /* Pods_Bird.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		7757FBF3207B56A500D8811B /* BirdPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdPresenter.swift; sourceTree = "<group>"; };
 		7757FBF5207B575800D8811B /* ViewBuild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBuild.swift; sourceTree = "<group>"; };
 		7757FBF7207B57BE00D8811B /* ViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
+		7757FBFB207C616900D8811B /* BirdInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdInfo.swift; sourceTree = "<group>"; };
+		7757FBFD207DBAF900D8811B /* DataBaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		BF32E0ACAA5E2139D6344658 /* Pods-Bird.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bird.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bird/Pods-Bird.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +104,7 @@
 				77332CA12079E0D9005AAEC4 /* LaunchScreen.storyboard */,
 				77332CA42079E0D9005AAEC4 /* Info.plist */,
 				77332C9C2079E0D9005AAEC4 /* Bird.xcdatamodeld */,
+				7757FBFB207C616900D8811B /* BirdInfo.swift */,
 				7757FBFA207B5AD900D8811B /* Presenter */,
 				7757FBF9207B57DE00D8811B /* Protocols */,
 				7757FBF2207B568100D8811B /* Service */,
@@ -126,6 +131,7 @@
 				7757FBE9207B528500D8811B /* APISelected.swift */,
 				7757FBEB207B52D000D8811B /* APIManager.swift */,
 				7757FBED207B537A00D8811B /* RequestManager.swift */,
+				7757FBFD207DBAF900D8811B /* DataBaseManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -277,11 +283,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bird/Pods-Bird-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7757FBFE207DBAF900D8811B /* DataBaseManager.swift in Sources */,
 				7757FBF8207B57BE00D8811B /* ViewData.swift in Sources */,
 				7757FBF6207B575800D8811B /* ViewBuild.swift in Sources */,
 				77332CAB2079E24D005AAEC4 /* BirdModel.swift in Sources */,
@@ -308,6 +319,7 @@
 				77332CB12079E2F4005AAEC4 /* GeneralModel.swift in Sources */,
 				7757FBF1207B542A00D8811B /* GeneralService.swift in Sources */,
 				77332CAF2079E2C3005AAEC4 /* UserModel.swift in Sources */,
+				7757FBFC207C616900D8811B /* BirdInfo.swift in Sources */,
 				77332C962079E0D8005AAEC4 /* AppDelegate.swift in Sources */,
 				7757FBEA207B528500D8811B /* APISelected.swift in Sources */,
 			);
