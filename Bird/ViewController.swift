@@ -1,7 +1,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import CoreData
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,7 +20,8 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         searchBird()
-        birdsArray = DataBaseManager.shared.fetchFromCoreData()
+        birdsArray = DataBaseManager.shared.fetchFromCoreData(entityName: "BirdEntity", key: "birds") as! [String]
+ 
     }
     func searchBird() {
         searchBar
@@ -64,7 +64,7 @@ extension ViewController : ViewBuild {
         viewData = data as! [BirdViewData]
         tableView.isEditing = false
         birdsArray = (viewData.first?.birds)!
-        DataBaseManager.shared.saveContext(birdsArray)
+        DataBaseManager.shared.saveContext(birdsArray as AnyObject, entityName: "BirdEntity", key: "birds")
       }
 }
 

@@ -39,11 +39,12 @@ class DataBaseManager {
     
     // MARK: - Core Data Saving support
     
-    func saveContext (_ arr : [String]) {
+    func saveContext (_ arr : AnyObject, entityName : String, key: String) {
         let context = persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "BirdEntity", in: context)
-        let birds = NSManagedObject(entity: entity!, insertInto: context)
-        birds.setValue(arr, forKey: "birds")
+        let entity = NSEntityDescription.entity(forEntityName: entityName, in: context)
+        let object = NSManagedObject(entity: entity!, insertInto: context)
+        print(arr)
+        object.setValue(arr, forKey: key)
         if context.hasChanges {
             do {
                 try context.save()
@@ -56,21 +57,20 @@ class DataBaseManager {
         }
     }
    
-    func fetchFromCoreData() -> Array<String>{
+    func fetchFromCoreData(entityName : String, key: String) -> AnyObject{
         let context = persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "BirdEntity")
-        var returnArray: [String] = Array<String>()
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        var returnObject  : AnyObject = 0 as AnyObject
         request.returnsObjectsAsFaults = false
         do {
            let result = try context.fetch(request)
             for res in result as! [NSManagedObject] {
-                print("Res = ", res.value(forKey: "birds"))
-                returnArray = res.value(forKey: "birds") as! [String]
+                 returnObject = res.value(forKey: key) as AnyObject
             }
         } catch {
             print("Failed")
 
         }
-        return returnArray
+        return returnObject
     }
 }

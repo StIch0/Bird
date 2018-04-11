@@ -4,6 +4,6 @@
         <attribute name="birds" optional="YES" attributeType="Transformable" customClassName="[String]" syncable="YES"/>
     </entity>
     <elements>
-        <element name="BirdEntity" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="BirdEntity" positionX="2059" positionY="228" width="128" height="60"/>
     </elements>
 </model>

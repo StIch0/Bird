@@ -7,8 +7,14 @@
 //
 
 import Foundation
-class UserModel {
-    var id : Int = 0
-    var userName : String = ""
-    var password : String = ""
+ class UserModel{
+    var id : Int = Int()
+    var userName : String = String()
+    var password : String = String()
+    init(id: Int, userName: String, password: String) {
+        self.id = id
+        self.userName = userName
+        self.password = password
+    }
+
 }

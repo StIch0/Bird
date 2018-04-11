@@ -10,7 +10,6 @@
 		77332C962079E0D8005AAEC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77332C952079E0D8005AAEC4 /* AppDelegate.swift */; };
 		77332C982079E0D8005AAEC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77332C972079E0D8005AAEC4 /* ViewController.swift */; };
 		77332C9B2079E0D9005AAEC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77332C992079E0D9005AAEC4 /* Main.storyboard */; };
-		77332C9E2079E0D9005AAEC4 /* Bird.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77332C9C2079E0D9005AAEC4 /* Bird.xcdatamodeld */; };
 		77332CA02079E0D9005AAEC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77332C9F2079E0D9005AAEC4 /* Assets.xcassets */; };
 		77332CA32079E0D9005AAEC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77332CA12079E0D9005AAEC4 /* LaunchScreen.storyboard */; };
 		77332CAB2079E24D005AAEC4 /* BirdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77332CAA2079E24D005AAEC4 /* BirdModel.swift */; };
@@ -36,7 +35,6 @@
 		77332C952079E0D8005AAEC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77332C972079E0D8005AAEC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		77332C9A2079E0D9005AAEC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		77332C9D2079E0D9005AAEC4 /* Bird.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bird.xcdatamodel; sourceTree = "<group>"; };
 		77332C9F2079E0D9005AAEC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77332CA22079E0D9005AAEC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77332CA42079E0D9005AAEC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				77332C9F2079E0D9005AAEC4 /* Assets.xcassets */,
 				77332CA12079E0D9005AAEC4 /* LaunchScreen.storyboard */,
 				77332CA42079E0D9005AAEC4 /* Info.plist */,
-				77332C9C2079E0D9005AAEC4 /* Bird.xcdatamodeld */,
 				7757FBFB207C616900D8811B /* BirdInfo.swift */,
 				7757FBFA207B5AD900D8811B /* Presenter */,
 				7757FBF9207B57DE00D8811B /* Protocols */,
@@ -311,7 +308,6 @@
 				7757FBF6207B575800D8811B /* ViewBuild.swift in Sources */,
 				77332CAB2079E24D005AAEC4 /* BirdModel.swift in Sources */,
 				7757FBEC207B52D000D8811B /* APIManager.swift in Sources */,
-				77332C9E2079E0D9005AAEC4 /* Bird.xcdatamodeld in Sources */,
 				7757FBF4207B56A500D8811B /* BirdPresenter.swift in Sources */,
 				77332C982079E0D8005AAEC4 /* ViewController.swift in Sources */,
 				77332CAD2079E2B7005AAEC4 /* ResultModel.swift in Sources */,
@@ -490,19 +486,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		77332C9C2079E0D9005AAEC4 /* Bird.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				77332C9D2079E0D9005AAEC4 /* Bird.xcdatamodel */,
-			);
-			currentVersion = 77332C9D2079E0D9005AAEC4 /* Bird.xcdatamodel */;
-			path = Bird.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 77332C8A2079E0D8005AAEC4 /* Project object */;
 }
