@@ -72,9 +72,7 @@ class DataBaseManager {
            let result = try context.fetch(request)
             for res in result as! [NSManagedObject] {
                 for index in key{
-                    print("asdasdddas")
-                 returnObject = res.value(forKey: index) as AnyObject
-                    print("qweqwe")
+                  returnObject = res.value(forKey: index) as AnyObject
 
                 }
             }

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G20015" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G20015" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aKj-71-5pF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -58,7 +59,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="99.400299850074973"/>
+            <point key="canvasLocation" x="1772" y="99"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="ahs-uH-MpR">
+            <objects>
+                <viewController id="aKj-71-5pF" customClass="LoginViewController" customModule="Bird" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OZ9-DF-qNp"/>
+                        <viewControllerLayoutGuide type="bottom" id="sd0-Fl-UXV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5b6-rB-bKJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qzh-8j-RrI">
+                                <rect key="frame" x="16" y="173" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MWg-zu-8o7">
+                                <rect key="frame" x="16" y="236" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFJ-nO-kez">
+                                <rect key="frame" x="16" y="302" width="343" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="login:" destination="aKj-71-5pF" eventType="touchUpInside" id="Mu8-e1-PaD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MWg-zu-8o7" firstAttribute="leading" secondItem="Qzh-8j-RrI" secondAttribute="leading" id="5TM-GQ-6dd"/>
+                            <constraint firstItem="MWg-zu-8o7" firstAttribute="trailing" secondItem="OFJ-nO-kez" secondAttribute="trailing" id="8pL-6W-u6V"/>
+                            <constraint firstItem="MWg-zu-8o7" firstAttribute="top" secondItem="Qzh-8j-RrI" secondAttribute="bottom" constant="33" id="IBn-GN-igQ"/>
+                            <constraint firstItem="Qzh-8j-RrI" firstAttribute="top" secondItem="OZ9-DF-qNp" secondAttribute="bottom" constant="153" id="IBw-S4-N7e"/>
+                            <constraint firstItem="OFJ-nO-kez" firstAttribute="top" secondItem="MWg-zu-8o7" secondAttribute="bottom" constant="36" id="OFR-t2-Ffw"/>
+                            <constraint firstItem="MWg-zu-8o7" firstAttribute="leading" secondItem="OFJ-nO-kez" secondAttribute="leading" id="Wgx-0y-rhF"/>
+                            <constraint firstItem="Qzh-8j-RrI" firstAttribute="trailing" secondItem="5b6-rB-bKJ" secondAttribute="trailingMargin" id="fqH-IS-Xcl"/>
+                            <constraint firstItem="MWg-zu-8o7" firstAttribute="trailing" secondItem="Qzh-8j-RrI" secondAttribute="trailing" id="jHW-8R-aku"/>
+                            <constraint firstItem="Qzh-8j-RrI" firstAttribute="leading" secondItem="5b6-rB-bKJ" secondAttribute="leadingMargin" id="peV-QX-TTj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginText" destination="Qzh-8j-RrI" id="Jjl-M3-dAi"/>
+                        <outlet property="passText" destination="MWg-zu-8o7" id="gV5-mi-Ahg"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segue" id="36l-oM-dgq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sVR-3x-Tsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896.79999999999995" y="98.50074962518741"/>
         </scene>
     </scenes>
 </document>
