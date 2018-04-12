@@ -25,6 +25,7 @@
 		7757FBF8207B57BE00D8811B /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757FBF7207B57BE00D8811B /* ViewData.swift */; };
 		7757FBFC207C616900D8811B /* BirdInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757FBFB207C616900D8811B /* BirdInfo.swift */; };
 		7757FBFE207DBAF900D8811B /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757FBFD207DBAF900D8811B /* DataBaseManager.swift */; };
+		7757FC04207DFB1400D8811B /* Bird.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7757FC02207DFB1400D8811B /* Bird.xcdatamodeld */; };
 		DA8C093E3FE4790F5DD10D09 /* Pods_Bird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A15B68A9499B10B321F0D4 /* Pods_Bird.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		7757FBF7207B57BE00D8811B /* ViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
 		7757FBFB207C616900D8811B /* BirdInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdInfo.swift; sourceTree = "<group>"; };
 		7757FBFD207DBAF900D8811B /* DataBaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		7757FC03207DFB1400D8811B /* Bird.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bird.xcdatamodel; sourceTree = "<group>"; };
 		BF32E0ACAA5E2139D6344658 /* Pods-Bird.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bird.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bird/Pods-Bird.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 				77332C9F2079E0D9005AAEC4 /* Assets.xcassets */,
 				77332CA12079E0D9005AAEC4 /* LaunchScreen.storyboard */,
 				77332CA42079E0D9005AAEC4 /* Info.plist */,
+				7757FC02207DFB1400D8811B /* Bird.xcdatamodeld */,
 				7757FBFB207C616900D8811B /* BirdInfo.swift */,
 				7757FBFA207B5AD900D8811B /* Presenter */,
 				7757FBF9207B57DE00D8811B /* Protocols */,
@@ -313,6 +316,7 @@
 				77332CAD2079E2B7005AAEC4 /* ResultModel.swift in Sources */,
 				7757FBEE207B537A00D8811B /* RequestManager.swift in Sources */,
 				77332CB12079E2F4005AAEC4 /* GeneralModel.swift in Sources */,
+				7757FC04207DFB1400D8811B /* Bird.xcdatamodeld in Sources */,
 				7757FBF1207B542A00D8811B /* GeneralService.swift in Sources */,
 				77332CAF2079E2C3005AAEC4 /* UserModel.swift in Sources */,
 				7757FBFC207C616900D8811B /* BirdInfo.swift in Sources */,
@@ -486,6 +490,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7757FC02207DFB1400D8811B /* Bird.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7757FC03207DFB1400D8811B /* Bird.xcdatamodel */,
+			);
+			currentVersion = 7757FC03207DFB1400D8811B /* Bird.xcdatamodel */;
+			path = Bird.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 77332C8A2079E0D8005AAEC4 /* Project object */;
 }

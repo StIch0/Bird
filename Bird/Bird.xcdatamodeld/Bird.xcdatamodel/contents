@@ -3,7 +3,11 @@
     <entity name="BirdEntity" representedClassName="BirdEntity" syncable="YES" codeGenerationType="class">
         <attribute name="birds" optional="YES" attributeType="Transformable" customClassName="[String]" syncable="YES"/>
     </entity>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="userModel" optional="YES" attributeType="Transformable" customClassName="UserModel" syncable="YES"/>
+    </entity>
     <elements>
         <element name="BirdEntity" positionX="2059" positionY="228" width="128" height="60"/>
+        <element name="UserEntity" positionX="2088" positionY="261" width="128" height="60"/>
     </elements>
 </model>

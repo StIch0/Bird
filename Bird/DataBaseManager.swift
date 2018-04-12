@@ -9,7 +9,10 @@
 import Foundation
 import CoreData
 class DataBaseManager {
-    public static let shared  = DataBaseManager()
+    
+    public static var shared  : DataBaseManager = {
+        return DataBaseManager()
+    }()
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
@@ -39,12 +42,15 @@ class DataBaseManager {
     
     // MARK: - Core Data Saving support
     
-    func saveContext (_ arr : AnyObject, entityName : String, key: String) {
+    func saveContext (_ arr : AnyObject, entityName : String, key: String...) {
         let context = persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: entityName, in: context)
         let object = NSManagedObject(entity: entity!, insertInto: context)
         print(arr)
-        object.setValue(arr, forKey: key)
+        for index in key{
+            
+            object.setValue(arr, forKey: index)
+        }
         if context.hasChanges {
             do {
                 try context.save()
@@ -57,7 +63,7 @@ class DataBaseManager {
         }
     }
    
-    func fetchFromCoreData(entityName : String, key: String) -> AnyObject{
+    func fetchFromCoreData(entityName : String, key: String...) -> AnyObject{
         let context = persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         var returnObject  : AnyObject = 0 as AnyObject
@@ -65,12 +71,18 @@ class DataBaseManager {
         do {
            let result = try context.fetch(request)
             for res in result as! [NSManagedObject] {
-                 returnObject = res.value(forKey: key) as AnyObject
+                for index in key{
+                    print("asdasdddas")
+                 returnObject = res.value(forKey: index) as AnyObject
+                    print("qweqwe")
+
+                }
             }
         } catch {
             print("Failed")
 
         }
+        print(returnObject)
         return returnObject
     }
 }

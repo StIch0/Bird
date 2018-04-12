@@ -11,6 +11,9 @@ class ViewController: UIViewController {
     var activityIndicator : UIActivityIndicatorView = UIActivityIndicatorView()
     let presenter  = BirdPresenter(service: GeneralService())
     let disposeBag = DisposeBag()
+    let db = DataBaseManager.shared
+    
+    
      override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.hidesWhenStopped = true
@@ -20,8 +23,10 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         searchBird()
-        birdsArray = DataBaseManager.shared.fetchFromCoreData(entityName: "BirdEntity", key: "birds") as! [String]
- 
+        
+        birdsArray = db.fetchFromCoreData(entityName: "BirdEntity", key: "birds") as! [String]
+//        db.saveContext(UserModel.init(id: 0, userName: "name", password: "pass") as AnyObject, entityName: "UserEntity", key: "id", "userName", "password")
+
     }
     func searchBird() {
         searchBar
@@ -64,7 +69,7 @@ extension ViewController : ViewBuild {
         viewData = data as! [BirdViewData]
         tableView.isEditing = false
         birdsArray = (viewData.first?.birds)!
-        DataBaseManager.shared.saveContext(birdsArray as AnyObject, entityName: "BirdEntity", key: "birds")
+        db.saveContext(birdsArray as AnyObject, entityName: "BirdEntity", key: "birds")
       }
 }
 
