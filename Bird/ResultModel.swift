@@ -8,13 +8,22 @@
 
 import Foundation
 class ResultModel: GeneralModel {
+    internal func loadData(_ dict: [String : AnyObject]) {
+        
+    }
+
+    internal func build(_ dict: [String : AnyObject]) -> GeneralModel {
+        let model = ResultModel()
+        return model
+    }
     var result : Bool = false
     var id : Int? = 0
     
-    internal func loadData(_ dict: [String : AnyObject]) {
-//        if let data = dict
+    func loadData(_ dict: AnyObject) {
+        id = dict as? Int ?? 0
+        result = dict as? Bool ?? false
     }
-    internal func build(_ dict: [String : AnyObject]) -> GeneralModel {
+   class func build(_ dict: AnyObject) -> GeneralModel {
         let model = ResultModel()
         model.loadData(dict)
         return model

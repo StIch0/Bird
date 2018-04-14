@@ -10,4 +10,5 @@ import Foundation
 enum APISelected : String{
     case get_bird = "get-bird"
     case auth = "auth"
+    case coords_from_app = "coords-from-app"
 }
