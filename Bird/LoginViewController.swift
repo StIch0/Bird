@@ -5,8 +5,8 @@ import Alamofire
 class LoginViewController: UIViewController {
     var activityIndicator : UIActivityIndicatorView = UIActivityIndicatorView()
     var id : Int = 0
-    let presenter = LoginPresenter(service: GeneralService())
-    var loginViewData = [LoginViewData]()
+    let presenter = ResultPresenter(service: GeneralService())
+    var loginViewData = [ResultViewData]()
     @IBOutlet weak var loginText: UITextField!
     @IBOutlet weak var passText: UITextField!
     @IBAction func login(_ sender: Any) {
@@ -31,8 +31,10 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func checViewData(_ data: [LoginViewData]) {
+    func checViewData(_ data: [ResultViewData]) {
         if data.first?.result != false {
+            //Attention!!!!
+            UserModel.init(id: (data.first?.id)!, userName: loginText.text!, password: passText.text!)
             performSegue(withIdentifier: "segue", sender: self)
         }
         else {
@@ -62,7 +64,7 @@ extension LoginViewController : ViewBuild {
 
     internal func setData(data: [ViewData]) {
         view.isHidden = false
-        loginViewData = data as! [LoginViewData]
+        loginViewData = data as! [ResultViewData]
         checViewData(loginViewData)
         print("loginViewData = ",loginViewData)
     }

@@ -27,8 +27,7 @@
 		7757FBFE207DBAF900D8811B /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757FBFD207DBAF900D8811B /* DataBaseManager.swift */; };
 		7757FC04207DFB1400D8811B /* Bird.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7757FC02207DFB1400D8811B /* Bird.xcdatamodeld */; };
 		7757FC06207F0B6F00D8811B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757FC05207F0B6F00D8811B /* LoginViewController.swift */; };
-		7757FC08207F0D4300D8811B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757FC07207F0D4300D8811B /* LoginPresenter.swift */; };
-		7757FC2F20808B5900D8811B /* PostDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757FC2E20808B5900D8811B /* PostDataViewController.swift */; };
+		7757FC08207F0D4300D8811B /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757FC07207F0D4300D8811B /* ResultPresenter.swift */; };
 		DA8C093E3FE4790F5DD10D09 /* Pods_Bird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A15B68A9499B10B321F0D4 /* Pods_Bird.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +56,7 @@
 		7757FBFD207DBAF900D8811B /* DataBaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		7757FC03207DFB1400D8811B /* Bird.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bird.xcdatamodel; sourceTree = "<group>"; };
 		7757FC05207F0B6F00D8811B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		7757FC07207F0D4300D8811B /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		7757FC2E20808B5900D8811B /* PostDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataViewController.swift; sourceTree = "<group>"; };
+		7757FC07207F0D4300D8811B /* ResultPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
 		BF32E0ACAA5E2139D6344658 /* Pods-Bird.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bird.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bird/Pods-Bird.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				7757FBF3207B56A500D8811B /* BirdPresenter.swift */,
-				7757FC07207F0D4300D8811B /* LoginPresenter.swift */,
+				7757FC07207F0D4300D8811B /* ResultPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -162,7 +160,6 @@
 			children = (
 				77332C972079E0D8005AAEC4 /* ViewController.swift */,
 				7757FC05207F0B6F00D8811B /* LoginViewController.swift */,
-				7757FC2E20808B5900D8811B /* PostDataViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -344,7 +341,6 @@
 				7757FBF6207B575800D8811B /* ViewBuild.swift in Sources */,
 				77332CAB2079E24D005AAEC4 /* BirdModel.swift in Sources */,
 				7757FBEC207B52D000D8811B /* APIManager.swift in Sources */,
-				7757FC2F20808B5900D8811B /* PostDataViewController.swift in Sources */,
 				7757FBF4207B56A500D8811B /* BirdPresenter.swift in Sources */,
 				77332C982079E0D8005AAEC4 /* ViewController.swift in Sources */,
 				77332CAD2079E2B7005AAEC4 /* ResultModel.swift in Sources */,
@@ -352,7 +348,7 @@
 				77332CB12079E2F4005AAEC4 /* GeneralModel.swift in Sources */,
 				7757FC04207DFB1400D8811B /* Bird.xcdatamodeld in Sources */,
 				7757FBF1207B542A00D8811B /* GeneralService.swift in Sources */,
-				7757FC08207F0D4300D8811B /* LoginPresenter.swift in Sources */,
+				7757FC08207F0D4300D8811B /* ResultPresenter.swift in Sources */,
 				77332CAF2079E2C3005AAEC4 /* UserModel.swift in Sources */,
 				7757FC06207F0B6F00D8811B /* LoginViewController.swift in Sources */,
 				7757FBFC207C616900D8811B /* BirdInfo.swift in Sources */,

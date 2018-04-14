@@ -8,11 +8,11 @@
 
 import Foundation
 import UIKit
-struct LoginViewData:ViewData {
+struct ResultViewData:ViewData {
     let id  : Int
     let result : Bool
 }
-class LoginPresenter {
+class ResultPresenter {
     var service = GeneralService()
     weak private var view : ViewBuild?
     init(service: GeneralService) {
@@ -44,8 +44,8 @@ class LoginPresenter {
                                 }
                                 else {
                                     let resMap = (result as! [ResultModel]).map{
-                                        rmap->LoginViewData in
-                                        return LoginViewData(id: rmap.id!,
+                                        rmap->ResultViewData in
+                                        return ResultViewData(id: rmap.id!,
                                                              result : rmap.result)
                                     }
                                     self.view?.setData(data: resMap)

@@ -36,7 +36,6 @@ class APIManager {
              (responseJSON : JSON)->Void in
 
                  if let keyDict = key {
-                    print("responseJSON = AAA ",responseJSON)
                      var dataModel = Array<GeneralModel>()
                     let data = ResultModel.build(responseJSON.object as AnyObject)
                     dataModel.append(data)
