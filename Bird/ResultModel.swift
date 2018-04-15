@@ -9,7 +9,7 @@
 import Foundation
 class ResultModel: GeneralModel {
     internal func loadData(_ dict: [String : AnyObject]) {
-        
+ 
     }
 
     internal func build(_ dict: [String : AnyObject]) -> GeneralModel {

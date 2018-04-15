@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
     func checViewData(_ data: [ResultViewData]) {
         if data.first?.result != false {
             //Attention!!!!
-            UserModel.init(id: (data.first?.id)!, userName: loginText.text!, password: passText.text!)
+            let _ = UserModel.init(id: (data.first?.id)!, userName: loginText.text!, password: passText.text!)
             performSegue(withIdentifier: "segue", sender: self)
         }
         else {

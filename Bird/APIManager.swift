@@ -37,21 +37,9 @@ class APIManager {
 
                  if let keyDict = key {
                      var dataModel = Array<GeneralModel>()
-                    let data = ResultModel.build(responseJSON.object as AnyObject)
-                    dataModel.append(data)
+                     let data = ResultModel.build(responseJSON.object as AnyObject)
+                     dataModel.append(data)
                     successCallback?(dataModel)
-//                    if let responseDict = responseJSON.dictionary?.values.first {
-//                        let dataDict = responseDict as! [[String : AnyObject]]
-//                        var dataModel = Array<GeneralModel>()
-//                        for item in dataDict {
-//                            let data = model.build(item)
-//                            dataModel.append(data)
-//                        }
-//                        successCallback?(dataModel)
-//                    }
-//                    else {
-//                        failureCallback?("An error has occured.")
-//                    }
                 }
                 else {
                     if let responseDict = responseJSON.dictionaryObject {

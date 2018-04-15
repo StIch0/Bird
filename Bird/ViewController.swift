@@ -15,15 +15,22 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     let db = DataBaseManager.shared
     var images : [UIImage] = Array()
     var locationManager = CLLocationManager()
-
+    let user : UserModel = UserModel()
+    var coordinates :  [String : CLLocationDegrees] = Dictionary()
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    var titleBird : String =  ""
     @IBAction func btnPostData(_ sender: Any) {
         
         let postPresenter = ResultPresenter(service: GeneralService())
         var postViewData = [ResultViewData]()
         postPresenter.atachView(view: self as ViewBuild)
-        postPresenter.getData(APISelected.coords_from_app.rawValue, [:], withName: "", imageArr: images)
+        postPresenter.getData(APISelected.coords_from_app.rawValue, [
+            "CoordsImages[user_id]":user.id as AnyObject,
+            "CoordsImages[x]" : coordinates["x"] as AnyObject,
+            "CoordsImages[y]" : coordinates["y"] as AnyObject,
+            "CoordsImages[bird_name]" : titleBird as AnyObject],
+                              withName: "CoordsImages[image][]",
+                              imageArr: images)
         
     }
     @IBAction func btnOpenCamera(_ sender: Any) {
@@ -69,31 +76,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         print("location = " ,  locValue.longitude,locValue.latitude)
-//        let userLocation :CLLocation = locations[0] as CLLocation
-//        
-//        print("user latitude = \(userLocation.coordinate.latitude)")
-//        print("user longitude = \(userLocation.coordinate.longitude)")
-//        
-//        print("\(userLocation.coordinate.latitude)")
-//        print("\(userLocation.coordinate.longitude)")
-//        
-//        let geocoder = CLGeocoder()
-//        geocoder.reverseGeocodeLocation(userLocation) { (placemarks, error) in
-//            if (error != nil){
-//                print("error in reverseGeocode")
-//            }
-//            let placemark = placemarks! as [CLPlacemark]
-//            if placemark.count>0{
-//                let placemark = placemarks![0]
-//                print(placemark.locality!)
-//                print(placemark.administrativeArea!)
-//                print(placemark.country!)
-//                
-//                print("\(placemark.locality!), \(placemark.administrativeArea!), \(placemark.country!)")
-//            }
-//        }
-//
-//        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        coordinates["x"] = locValue.longitude
+        coordinates["y"] = locValue.latitude
+
     }
     
     
@@ -150,6 +135,7 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         searchBar.text = searchData[indexPath.row]
+        titleBird = searchData[indexPath.row]
      }
     
     @available(iOS 2.0, *)

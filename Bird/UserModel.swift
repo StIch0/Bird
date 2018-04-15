@@ -19,6 +19,6 @@ class UserModel {
     func getUserInfo() {
         print(self.id,"/n", self.userName,"/n", self.password ,"/n")
     }
-    
+    required init() {}
    
 }
